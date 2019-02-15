@@ -87,7 +87,7 @@ window.Connect4Game = {
       let count = 0;
       // for every row...
       for (let row = 0; row < self.board.length; row++) {
-        // for every nox in that row
+        // for every box in that row
         for (let column = 0; column < self.board[row].length; column++) {
           count = 0;
           // start counting diagonally from starting point...
@@ -151,8 +151,11 @@ window.Connect4Game = {
     whoseturn.style.display = 'none';
   },
   dropCoin (column) {
+    // check each box in chosen column starting from bottom going up
     for (let row = this.board.length-1; row >= 0; row--) {
+      // if the box is empty...
       if (this.board[row][column] === 0) {
+        // put a coin in that box belonging to the player whose turn it is
         this.board[row][column] = this.turn;
         // return true meaning a coin as dropped successfully
         return true;
