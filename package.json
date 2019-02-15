@@ -1,0 +1,12 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "parcel-bundler": "^1.11.0"
+  },
+  "scripts": {
+    "start": "./node_modules/.bin/parcel index.html"
+  }
+}
